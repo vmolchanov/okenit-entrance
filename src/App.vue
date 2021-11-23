@@ -1,30 +1,51 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <div class="container">
+        <router-view/>
+    </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss">
+    $desktop: 1200px;
+    $tablet: 768px;
+    $mobile: 480px;
+    $mobile-xs: 320px;
 
-#nav {
-  padding: 30px;
-}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+    }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    .container {
+        width: $desktop;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: $desktop) {
+            width: $tablet;
+        }
+
+        @media (max-width: $tablet) {
+            width: $mobile;
+        }
+
+        @media (max-width: $mobile) {
+            width: $mobile-xs;
+        }
+    }
+
+    .visually-hidden {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+    }
 </style>

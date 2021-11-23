@@ -1,12 +1,8 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex';
+import {messages} from './modules/messages';
 
-export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+export const store = createStore({
+    modules: {
+        messages
+    }
+});
