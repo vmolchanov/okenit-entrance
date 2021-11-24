@@ -4,7 +4,7 @@
 
 ```shell
 $ npm i
-$ npm start
+$ npm run serve
 ```
 
 Для эмуляции работы сервера был использован инструмент json-server
